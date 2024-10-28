@@ -22,7 +22,7 @@ export default function OrderSummaryDashboard() {
         </button>
       </CardHeader>
 
-      <div className="bg-pink-100 text-primary_defult flex items-center justify-between px-4 rounded-md py-2 mb-4">
+      <div className="bg-pink-100 text-primary_defult flex text-sm lg:text-base items-center justify-between px-4 rounded-md py-2 mb-4">
         <strong className="flex items-center gap-1">
           <Sailboat /> 125 new orders!
         </strong>
@@ -30,7 +30,7 @@ export default function OrderSummaryDashboard() {
           Manage Order
         </button>
       </div>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-col lg:flex-row items-center">
         <CardContent className="mb-4 pt-6">
           <PieChart width={180} height={200}>
             <Pie
@@ -46,7 +46,7 @@ export default function OrderSummaryDashboard() {
           </PieChart>
         </CardContent>
 
-        <div className="space-y-4 flex-1">
+        <div className="space-y-4 w-full lg:flex-1">
           {chartData.map((item, index) => (
             <div key={index}>
               <div className="flex mb-1 items-center justify-between">

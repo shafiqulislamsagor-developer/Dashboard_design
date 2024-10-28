@@ -27,7 +27,7 @@ export default function Navbar() {
         </div>
         <Separator className="h-10 w-[1px]" orientation="vertical" />
         <div className="flex items-center gap-4">
-          <div>
+          <div className="hidden lg:block">
             <h1 className="text-base font-semibold">Nayamul Roni</h1>
             <p className="text-sm text-gray-400 text-right">super admin</p>
           </div>

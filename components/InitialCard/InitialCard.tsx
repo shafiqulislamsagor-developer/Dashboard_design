@@ -52,7 +52,7 @@ export default function InitialCard() {
   ];
   return (
     <div className="my-5">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col lg:flex-row items-center justify-between">
         <div className="flex  p-2 rounded-md">
           {filters.map((filter, id) => (
             <Button
@@ -76,7 +76,7 @@ export default function InitialCard() {
         <DatePicker />
       </div>
 
-      <div className="grid grid-cols-4 gap-4 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-8">
         {cardData.map((data, id) => (
           <div
             key={id}

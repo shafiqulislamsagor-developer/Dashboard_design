@@ -10,7 +10,6 @@ import {
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EllipsisVertical } from "lucide-react";
-import MobileRevenueChart from "./MobileRevenueChart";
 
 const chartData = [
   { hour: "00hr", revenue: 50 },
@@ -28,15 +27,15 @@ const chartData = [
   { hour: "24hr", revenue: 600 },
 ];
 
-export function RevenueChart() {
+export function MobileRevenueChart() {
   return (
-    <div className="order-1">
-      <Card className="bg-white hidden lg:block  rounded-lg shadow-lg p-4 pl-1">
+    <div className="">
+      <Card className="bg-white block lg:hidden  rounded-lg shadow-lg p-4 pl-1">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <h1>
               {" "}
-              Revenue <span className="text-lg font-bold">600 AED</span>
+              Ree <span className="text-lg font-bold">600 AED</span>
             </h1>
             <button className="text-gray-500 hover:text-gray-700">
               <EllipsisVertical />
@@ -45,7 +44,7 @@ export function RevenueChart() {
         </CardHeader>
         <CardContent>
           <AreaChart
-            width={580}
+            width={320}
             height={250}
             data={chartData}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -87,9 +86,8 @@ export function RevenueChart() {
           </AreaChart>
         </CardContent>
       </Card>
-      <MobileRevenueChart />
     </div>
   );
 }
 
-export default RevenueChart;
+export default MobileRevenueChart;
