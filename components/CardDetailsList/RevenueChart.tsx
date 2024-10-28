@@ -9,6 +9,7 @@ import {
   Tooltip,
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EllipsisVertical } from "lucide-react";
 
 const chartData = [
   { hour: "00hr", revenue: 50 },
@@ -31,8 +32,14 @@ export function RevenueChart() {
     <div className="order-1">
       <Card className="bg-white rounded-lg shadow-lg p-4">
         <CardHeader>
-          <CardTitle>
-            Revenue <span className="text-lg font-bold">600 AED</span>
+          <CardTitle className="flex items-center justify-between">
+            <h1>
+              {" "}
+              Revenue <span className="text-lg font-bold">600 AED</span>
+            </h1>
+            <button className="text-gray-500 hover:text-gray-700">
+              <EllipsisVertical />
+            </button>
           </CardTitle>
         </CardHeader>
         <CardContent>

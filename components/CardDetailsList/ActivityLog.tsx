@@ -1,4 +1,6 @@
 import React from "react";
+import { Card } from "../ui/card";
+import { EllipsisVertical } from "lucide-react";
 
 export default function ActivityLog() {
   const activities = [
@@ -29,8 +31,13 @@ export default function ActivityLog() {
     },
   ];
   return (
-    <div className="bg-white order-4 rounded-lg shadow-lg p-4">
-      <h2 className="text-lg font-semibold mb-4">Activity Log</h2>
+    <Card className="bg-white order-4 rounded-lg shadow-lg p-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold mb-4">Activity Log</h2>
+        <button className="text-gray-500 hover:text-gray-700">
+          <EllipsisVertical />
+        </button>
+      </div>
       <div>
         {activities.map((activity, index) => (
           <div
@@ -47,6 +54,6 @@ export default function ActivityLog() {
           </div>
         ))}
       </div>
-    </div>
+    </Card>
   );
 }

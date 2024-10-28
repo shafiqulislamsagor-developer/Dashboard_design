@@ -1,4 +1,6 @@
 import React from "react";
+import { Card } from "../ui/card";
+import { EllipsisVertical } from "lucide-react";
 
 export default function PandingTasks() {
   const tasks = [
@@ -9,10 +11,12 @@ export default function PandingTasks() {
     { name: "Support Tickets", count: 10 },
   ];
   return (
-    <div className="p-4 order-2 bg-white rounded-lg shadow-md">
+    <Card className="p-4 order-2 bg-white rounded-lg shadow-md">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold text-gray-900">Pending Tasks</h2>
-        <button className="text-gray-500 hover:text-gray-700">•••</button>
+        <button className="text-gray-500 hover:text-gray-700">
+          <EllipsisVertical />
+        </button>
       </div>
       <div className="space-y-2">
         {tasks.map((task, index) => (
@@ -27,6 +31,6 @@ export default function PandingTasks() {
           </div>
         ))}
       </div>
-    </div>
+    </Card>
   );
 }

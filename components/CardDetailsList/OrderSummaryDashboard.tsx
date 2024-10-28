@@ -3,6 +3,7 @@
 import { PieChart, Pie, Cell } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { EllipsisVertical, Sailboat } from "lucide-react";
 
 const chartData = [
   { name: "Active", value: 389, color: "#34d399" },
@@ -14,18 +15,23 @@ const chartData = [
 export default function OrderSummaryDashboard() {
   return (
     <Card className="flex order-3 flex-col w-full mx-auto p-4">
-      <CardHeader className=" pb-2">
+      <CardHeader className="flex flex-row items-center justify-between pb-5">
         <CardTitle>Current Order Summary</CardTitle>
+        <button className="text-gray-500 hover:text-gray-700">
+          <EllipsisVertical />
+        </button>
       </CardHeader>
 
-      <div className="bg-pink-100 text-pink-700 flex items-center justify-between px-4 rounded-md py-2 mb-4">
-        <strong>125 new orders!</strong>
-        <button className="ml-4 px-3 py-1 bg-pink-500 text-white rounded-md">
+      <div className="bg-pink-100 text-primary_defult flex items-center justify-between px-4 rounded-md py-2 mb-4">
+        <strong className="flex items-center gap-1">
+          <Sailboat /> 125 new orders!
+        </strong>
+        <button className="ml-4 px-3 py-1 text-primary_defult bg-white rounded-md">
           Manage Order
         </button>
       </div>
-      <div className="flex items-center">
-        <CardContent className="flex justify-center items-center mb-4">
+      <div className="flex flex-row items-center">
+        <CardContent className="mb-4 ">
           <PieChart width={180} height={180}>
             <Pie
               data={chartData}
