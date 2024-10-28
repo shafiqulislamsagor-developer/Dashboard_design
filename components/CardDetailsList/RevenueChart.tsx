@@ -30,7 +30,7 @@ const chartData = [
 export function RevenueChart() {
   return (
     <div className="order-1">
-      <Card className="bg-white rounded-lg shadow-lg p-4">
+      <Card className="bg-white rounded-lg shadow-lg p-4 pl-1">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <h1>
@@ -65,7 +65,7 @@ export function RevenueChart() {
             <YAxis
               domain={[0, 600]}
               tickCount={6}
-              tickFormatter={(value) => `AED ${value}`}
+              tickFormatter={(value) => `AED${value}`}
               axisLine={false}
               tickLine={false}
               tick={{ fontSize: 12, fill: "#888" }}

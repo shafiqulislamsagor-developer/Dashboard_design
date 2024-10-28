@@ -54,12 +54,16 @@ export default function InitialCard() {
     <div className="my-5">
       <div className="flex items-center justify-between">
         <div className="flex  p-2 rounded-md">
-          {filters.map((filter) => (
+          {filters.map((filter, id) => (
             <Button
               key={filter}
               variant={"outline"}
               onClick={() => setSelected(filter)}
-              className={`px-4 py-2 rounded-none text-sm font-medium 
+              className={`px-4 py-2 rounded-none text-sm font-medium ${
+                (id === 0 && "rounded-l-md") ||
+                (id === filters.length - 1 && "rounded-r-lg")
+              } 
+               
             ${
               selected === filter ? "bg-gray-300" : "bg-white hover:bg-gray-200"
             } 

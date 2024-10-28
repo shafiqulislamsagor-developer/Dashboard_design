@@ -14,7 +14,7 @@ const chartData = [
 
 export default function OrderSummaryDashboard() {
   return (
-    <Card className="flex order-3 flex-col w-full mx-auto p-4">
+    <Card className="flex order-3 flex-col w-full mx-auto p-4 pt-0">
       <CardHeader className="flex flex-row items-center justify-between pb-5">
         <CardTitle>Current Order Summary</CardTitle>
         <button className="text-gray-500 hover:text-gray-700">
@@ -31,8 +31,8 @@ export default function OrderSummaryDashboard() {
         </button>
       </div>
       <div className="flex flex-row items-center">
-        <CardContent className="mb-4 ">
-          <PieChart width={180} height={180}>
+        <CardContent className="mb-4 pt-6">
+          <PieChart width={180} height={200}>
             <Pie
               data={chartData}
               innerRadius={60}
@@ -46,7 +46,7 @@ export default function OrderSummaryDashboard() {
           </PieChart>
         </CardContent>
 
-        <div className="space-y-2 flex-1">
+        <div className="space-y-4 flex-1">
           {chartData.map((item, index) => (
             <div key={index}>
               <div className="flex items-center justify-between">
