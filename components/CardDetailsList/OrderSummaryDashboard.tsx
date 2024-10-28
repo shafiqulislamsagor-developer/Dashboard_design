@@ -6,10 +6,10 @@ import { Progress } from "@/components/ui/progress";
 import { EllipsisVertical, Sailboat } from "lucide-react";
 
 const chartData = [
-  { name: "Active", value: 389, color: "#34d399" },
-  { name: "Pending", value: 125, color: "#60a5fa" },
-  { name: "Refunded", value: 234, color: "#fbbf24" },
-  { name: "Cancelled", value: 234, color: "#f87171" },
+  { name: "Active", value: 389, color: "#00997E" },
+  { name: "Pending", value: 125, color: "#41A3FF" },
+  { name: "Refunded", value: 234, color: "#FFA133" },
+  { name: "Cancelled", value: 234, color: "#FF1717" },
 ];
 
 export default function OrderSummaryDashboard() {
@@ -49,15 +49,15 @@ export default function OrderSummaryDashboard() {
         <div className="space-y-4 flex-1">
           {chartData.map((item, index) => (
             <div key={index}>
-              <div className="flex items-center justify-between">
+              <div className="flex mb-1 items-center justify-between">
                 <span>
                   {item.name} ({((item.value / 902) * 100).toFixed(0)}%)
                 </span>
-                <span>{item.value}</span>
+                <span className="text-gray-500">{item.value}</span>
               </div>
               <Progress
                 value={(item.value / 902) * 100}
-                className="w-[100%]"
+                className="w-[100%] h-3"
                 color={item.color}
               />
             </div>
